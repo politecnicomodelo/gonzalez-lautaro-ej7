@@ -1,7 +1,7 @@
-from profesor import profesor
-from alumnos import alumnos
-from plato import plato
-from pedido import pedido
+from clases.profesor import profesor
+from clases.alumnos import alumnos
+from clases.plato import plato
+from clases.pedido import pedido
 from datetime import date
 
 class menu(object):

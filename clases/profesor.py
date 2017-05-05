@@ -1,4 +1,4 @@
-from persona import persona
+from clases.persona import persona
 
 class profesor(persona):
     descuento = 0
