@@ -1,12 +1,12 @@
 from clases.profesor import profesor
-from clases.alumnos import alumnos
+from clases.alumnos import alumno
 from clases.plato import plato
 from clases.pedido import pedido
 from datetime import date
 
 class menu(object):
     profesores = []
-    alumno = []
+    alumnoss = []
     platos = []
     pedidos = []
 
@@ -17,7 +17,7 @@ class menu(object):
         self.profesores.append(unProf)
 
     def agregarAlumno(self):
-        unAlum=alumnos
+        unAlum=alumno
         unAlum.setNyA(input("nombre"),input("apellido"))
         unAlum.setDivision(input("division"))
         self.alumno.append(unAlum)

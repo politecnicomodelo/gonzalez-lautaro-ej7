@@ -1,4 +1,4 @@
-from persona import persona
+from clases.persona import persona
 
 class alumno(persona):
     division = 0
