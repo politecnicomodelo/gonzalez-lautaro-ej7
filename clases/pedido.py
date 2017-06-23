@@ -1,15 +1,15 @@
 from datetime import date
 from datetime import time
-from persona import persona
-from profesor import profesor
-from plato import plato
+from clases.persona import persona
+from clases.profesor import profesor
+from clases.plato import plato
 
 class pedido(object):
     fechaCreacion = date
     cliente = persona
     platoPedido = plato
     horaEntre = time
-    Estado = false
+    Estado = False
 
     def setPedido(self,f,c,p,h,e):
         self.fechaCreacion = f
