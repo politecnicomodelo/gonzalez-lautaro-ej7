@@ -14,7 +14,7 @@ def agregarProfesor():
     unProf=profesor
     unProf.setNyA(input("nombre: "),input("apellido: "))
     unProf.setDescuento(input("descuento: "))
-    self.profesores.append(unProf)
+    profesores.append(unProf)
 
 def agregarAlumno():
     unAlum=alumno
