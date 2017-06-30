@@ -9,6 +9,12 @@ class codigoMorse(object):
              'W' : '.--' ,   'X' : '-..-' ,  'Y' : '-.--'  , 'Z' : '--..' , '1' : '.----', '2' : '..---', '3':'...--',  '4' : '....-',
              '5' : '.....' , '6' : '-....' , '7' : '--...' , '8' : '---..' ,'9' : '----.' ,'0' : '-----', ' ' : '___'}
 
+    abecedario = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F', '--.': 'G', '....': 'H',
+             '..': 'I', '.---': 'J', '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O', '.--.': 'P',
+             '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T', '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X',
+             '-.--': 'Y', '--..': 'Z', '.----': '1', '..---': '2', '...--': '3', '....-': '4',
+             '.....': '5', '-....': '6', '--...': '7', '---..': '8', '----.': '9', '-----': '0', '___': ' '}
+
     def traducirTexto(self,texto):
         oracion = ""
         for letra in texto:
@@ -16,4 +22,16 @@ class codigoMorse(object):
                 oracion = oracion
             else:
                 oracion = oracion + self.morse[letra] + "|"
+        return oracion
+
+    def traducirMorse(self, codigo):
+        oracion = ""
+        letra = ""
+        for punto in codigo:
+            if (punto == "|"):
+                oracion = oracion + self.abecedario[letra]
+                letra = ""
+                continue
+            else:
+                letra = letra + punto
         return oracion
